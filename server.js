@@ -14,6 +14,14 @@ app.use(express.static("public"))
 // router
 app.use(productRouter)
 
+app.get("/", (req, res) => {
+  res.status(200).json({
+    message: "Salom ustoz"
+  })
+})
+
+
+
 app.listen(PORT, () => {
   console.log("Server is running at: http://localhost:"+PORT);
 })
